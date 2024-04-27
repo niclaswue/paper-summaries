@@ -1,0 +1,51 @@
+baseURL: https://arxiv-summary.com
+languageCode: en-us
+title: "arxiv-summary: AI-summarized AI papers"
+theme: 
+  - "papermod"
+
+params:
+  ShowShareButtons: true
+  ShowReadingTime: false
+
+  homeInfoParams:
+    Title: Hi there 👋
+    Content: Welcome to arxiv-summary, your one-stop destination for GPT-3 generated summaries of the latest machine learning and AI papers on [arxiv.org](http://www.arxiv.org). The goal is to make these papers more understandable and human-parsable, by providing clear and concise bullet points. I hope you find this site useful and come back often. Any feedback via the social buttons below is really appreciated. Thank you for visiting!
+
+  socialIcons: # optional
+    - name: "email"
+      url: "mailto:contact@arxiv-summary.com"
+    - name: "twitter"
+      url: "https://twitter.com/niclas_wue"
+    - name: "reddit"
+      url: "https://www.reddit.com/user/niclas_wue"
+
+  fuseOpts: # for search
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys:
+      - "title"
+      - "permalink"
+      - "summary"
+      - "content"
+
+menu:
+  main:
+    - identifier: archive
+      name: 🗃️ Archive
+      url: /archive/
+      weight: 10
+    - identifier: search
+      name: 🔍 Search
+      url: /search/
+      weight: 20
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
